@@ -27,7 +27,7 @@ def fail(score):
 
 
 # Result checker HTML page
-@app.route('/submit', methods=['POST','GET'])
+@app.route('/submit', methods=['POST'])
 def submit():
     percent_score = 0
     if request.method == 'POST':
