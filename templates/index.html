@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <tbody align="center">
+<h2 style="color:blue">SCORE ENTRY</h2>
+
+<p> Enter score for each subject on 100 </p>
+<form action="/submit" method='POST'>
+  <label for="DBMS">DBMS:</label><br>
+  <input  type="number" id="DBMS" name="DBMS" value="0" min="0" max="100" required="required"><br><br>
+  <label for="Maths">Maths:</label><br>
+  <input type="number" id="Maths" name="Maths" value="0" min="0" max="100" required="required"><br><br>
+  <label for="Python">Python:</label><br>
+  <input type="number" id="Python" name="Python" value="0" min="0" max="100" required="required"><br><br>
+  <label for="ML">ML:</label><br>
+  <input type="number" id="ML" name="ML" value="0" min="0" max="100" required="required"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<!-- <p>If you click the "Submit" button, the form-data will be sent to a page called "/submit".</p> -->
+</tbody>
+</body>
+</html>
