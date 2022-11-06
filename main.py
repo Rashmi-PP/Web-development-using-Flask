@@ -24,20 +24,12 @@ def fail(score):
     return render_template('results.html', result=["FAIL", score])
     # return "You failed and the score is...." + str(score) + "%"
 
-# @app.route('/results/<int:mark>')
-# def results(mark):
-#     result = ''
-#     if mark<50:
-#         result='fail'
-#     else:
-#         result='success'
-    
-#     return redirect(url_for(result, score=mark))
+
 
 # Result checker HTML page
 @app.route('/submit', methods=['POST','GET'])
 def submit():
-    total_score = 0
+    percent_score = 0
     if request.method == 'POST':
         dbms_ = float(request.form['DBMS'])
         maths_ = float(request.form['Maths'])
