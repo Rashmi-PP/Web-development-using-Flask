@@ -2,7 +2,12 @@
 <hmtl>
     <h2> Final Results </h2>
         <body>
-            Your result status is {{result[0]}} and your percentage is {{result[1]}} <br>
+            Your result status is {{result[0]}} and your percentage is {{result[1]}} <br><br>
             
+           <form action="{{url_for('home')}}"> 
+              <button  type="home" class="btn btn-primary btn-block btn-large"> 
+                HOME 
+              </button>
+           </form>
         </body>
 </hmtl>

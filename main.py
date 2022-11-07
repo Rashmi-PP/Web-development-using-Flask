@@ -2,11 +2,10 @@
 from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask(__name__)               
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('index.html')
 
-#name of page and method should be same
 @app.route('/success/<float:score>')
 def success(score):
     res = ''
