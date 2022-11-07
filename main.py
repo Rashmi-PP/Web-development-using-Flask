@@ -8,7 +8,7 @@ def home():
     return render_template('index.html')
 
 @app.route('/home')
-def home():
+def homepage():
     return render_template('index.html')
 
 @app.route('/success/<float:score>')
