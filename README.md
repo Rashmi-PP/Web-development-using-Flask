@@ -7,4 +7,4 @@ Visit https://exam-results.onrender.com/
 
 - The pass percentage is considered >=50 in this case.
 
-Old URL https://exam-results.herokuapp.com/ --> does not work as Heroku phased out free tier
+
