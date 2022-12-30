@@ -3,14 +3,17 @@ from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask(__name__)
 
+# Render home page using index.html for inputting the scores of various subjects
 @app.route('/')
 def home():
     return render_template('index.html')
 
+# Same as above with explicit /home in the URL
 @app.route('/home')
 def homepage():
     return render_template('index.html')
 
+# Check result status (Pass/Fail) and render results.html page
 @app.route('/success/<float:score>')
 def success(score):
     res = ''
@@ -29,8 +32,7 @@ def fail(score):
     # return "You failed and the score is...." + str(score) + "%"
 
 
-
-# Result checker HTML page
+# This portion defines the action that happens on clicking 'Submit' button - first calculates the percent score and then redirects to the corresponding results page
 @app.route('/submit', methods=['POST'])
 def submit():
     percent_score = 0
@@ -48,7 +50,8 @@ def submit():
     else:
         res = 'fail'
     return redirect(url_for(res,score=percent_score))
-        
+
+# Checks if this file is the main module to be executed
 if __name__=='__main__':
     app.run(debug=True)
 
